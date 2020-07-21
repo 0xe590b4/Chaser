@@ -795,16 +795,16 @@ class ShortVideo():
         clip_list = [bgVideo,video_clip_resize.set_pos("center")]
         if title :
             txt_clip = TextClip(title, font=TITLE_FONT, fontsize=70, color='white')
-            #title = txt_clip.set_position(('center', 'top')).set_duration(duration_video_clip)
+            title = txt_clip.set_position(('center', 'top')).set_duration(duration_video_clip)
             #title = txt_clip.set_position(lambda t: ('center', 50 + t)).set_duration(duration_video_clip)
-            title = txt_clip.set_position((0.1,0.2), relative=True).set_duration(duration_video_clip)
+            #title = txt_clip.set_position((0.1,0.2), relative=True).set_duration(duration_video_clip)
             clip_list.append(title)
 
         # 如果有字幕
         if subtitle :
             generator = lambda txt: TextClip(txt, font=SUBTITLE_FONT, fontsize=36, color='white')
-            #subtitles = (SubtitlesClip(subtitle, generator).set_position(('center', 'bottom')))
-            subtitles = (SubtitlesClip(subtitle, generator).set_position((0.1,0.7), relative=True))
+            subtitles = (SubtitlesClip(subtitle, generator).set_position(('center', 'bottom')))
+            #subtitles = (SubtitlesClip(subtitle, generator).set_position((0.1,0.7), relative=True))
             clip_list.append(subtitles)
 
         # 如果有logo

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1db213e2-2dce-46db-a50a-58f95e3ac293" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/batch_maker/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/batch_maker/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/batch_movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/batch_movie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/app_test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/app_test2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +28,20 @@
     <favorites_list name="Chaser" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="805" column="12" selection-start-line="805" selection-start-column="12" selection-end-line="805" selection-end-column="12" />
+              <folding>
+                <element signature="e#200#218#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,10 +148,10 @@
         <option value="$PROJECT_DIR$/batch_uploader/mobile.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/test/app_test2.py" />
-        <option value="$PROJECT_DIR$/demo/tools.py" />
         <option value="$PROJECT_DIR$/demo/test.py" />
         <option value="$PROJECT_DIR$/demo/batch_movie.py" />
         <option value="$PROJECT_DIR$/batch_maker/tools.py" />
+        <option value="$PROJECT_DIR$/demo/tools.py" />
       </list>
     </option>
   </component>
@@ -163,6 +172,11 @@
             <path>
               <item name="Chaser" type="b2602c69:ProjectViewProjectNode" />
               <item name="Chaser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chaser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chaser" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -337,15 +351,16 @@
       <workItem from="1594101950770" duration="8341000" />
       <workItem from="1594140226539" duration="55714000" />
       <workItem from="1594477409556" duration="1283000" />
-      <workItem from="1594558423024" duration="48531000" />
+      <workItem from="1594558423024" duration="49136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285506000" />
+    <option name="totallyTimeSpent" value="286111000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.18526466" />
       <window_info id="Structure" order="1" sideWeight="0.5010571" side_tool="true" weight="0.17489114" />
@@ -734,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="525" column="92" selection-start-line="525" selection-start-column="92" selection-end-line="525" selection-end-column="92" />
-          <folding>
-            <element signature="e#200#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
@@ -770,6 +775,16 @@
           <caret line="66" column="23" lean-forward="true" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
           <folding>
             <element signature="e#196#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="805" column="12" selection-start-line="805" selection-start-column="12" selection-end-line="805" selection-end-column="12" />
+          <folding>
+            <element signature="e#200#218#0" expanded="true" />
           </folding>
         </state>
       </provider>

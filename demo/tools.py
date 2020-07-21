@@ -24,7 +24,7 @@ from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import moviepy.audio.fx.all as afx
 import moviepy.video.fx.all as vfx
 
-from batch_maker.config import *
+from demo.config import *
 
 
 class ShortVideo():
@@ -638,6 +638,15 @@ class ShortVideo():
 
         return  output_cover_dir_data
 
+
+    def cut_audio(self, input_video_filename, start, end, output_video_filename):
+
+        audio = AudioFileClip(input_video_filename).subclip(start, end)
+
+        audio.write_audiofile(output_video_filename)
+        audio.close()
+
+
     def cut_video(self, input_video_filename, start, end, output_video_filename,crop_size = 0):
 
         """
@@ -659,8 +668,8 @@ class ShortVideo():
         video = CompositeVideoClip([video_clip])
 
 
-        video = video.fx(vfx.crop, x1=crop_size, width=video.w,
-                       y1=crop_size, height=video.h)
+        video = video.fx(vfx.crop,  x2=video.w,  width=video.w,
+                        y2=video.h-850, height=video.h-crop_size)
 
 
 

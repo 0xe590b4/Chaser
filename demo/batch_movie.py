@@ -56,7 +56,7 @@ class BatchMovie(Thread):
             "src_volume": 3,
             "dst_volume": 5,
             # "bgm_filename": bgm_audio_filename,
-            "watermark": "/Users/0xe590b4/Downloads/Chaser/batch_maker/logo.png",
+            #"watermark": "/Users/0xe590b4/Downloads/Chaser/demo/logo.png",
             "subtitle": subtitle,
             "output_video_filename": output_movie_filename,
             "video_name": os.path.basename(input_movie_filename),
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     workspace = "/Users/0xe590b4/Downloads/3d/done/demo"
 
 
-    end_title = "燕南赵北 \n 点下关注呗！"
+    end_title = "燕南赵北 \n 感谢您观看！"
     movie_data = workspace + "/data"
     movie_head = workspace + "/head"
     movie_body = workspace + "/body"
@@ -95,21 +95,21 @@ if __name__ == '__main__':
     movie_result = workspace + "/result"
 
     title_list = [
-        "机械.画皮 第一集",
-        "机械.画皮 第二集",
-        "机械.画皮 第三集"
+        "第一集",
+        "第二集",
+        "第三集"
     ]
 
     subtitle_list = [
-        "爱情里付出的人，总是卑微！",
-        "计算天，计算地，却计算不了你！",
-        "为什么结婚一定要有房？\n因为面子吗？不知道为什么呀"
+        "英雄的结局总让人唏嘘！",
+        "没有点本事,怎么敢做辛弃疾的女人",
+        "斩叛徒,收失地,真英雄！"
     ]
 
     m = BatchMovie()
 
 
-    for i  in [3]:
+    for i  in [1,2,3]:
 
         data_mp4 = "{}/{}.mp4".format(movie_data, i)
         haad_image = "{}/{}.png".format(movie_head, i)
@@ -133,18 +133,18 @@ if __name__ == '__main__':
                movie_body,
                )
 
-        # if not os.path.exists(end_mp4):
-        # m.end(body_mp4,
-        #       end_mp4,
-        #       end_title,
-        #       5
-        #       )
-        #
-        # m.head_body_end(
-        #     "{}/{}.mp4".format(movie_head, i),
-        #     "{}/{}.mp4".format(movie_body, i),
-        #     "{}/{}.mp4".format(movie_end, i),
-        #     "{}/{}.mp4".format(movie_result, i)
-        # )
+        #if not os.path.exists(end_mp4):
+        m.end(body_mp4,
+              end_mp4,
+              end_title,
+              5
+              )
+
+        m.head_body_end(
+            "{}/{}.mp4".format(movie_head, i),
+            "{}/{}.mp4".format(movie_body, i),
+            "{}/{}.mp4".format(movie_end, i),
+            "{}/{}.mp4".format(movie_result, i)
+        )
 
 

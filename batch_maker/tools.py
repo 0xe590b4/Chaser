@@ -695,7 +695,7 @@ class ShortVideo():
         background = data.get("background", None)
         cover = data.get("cover", None)
 
-        colorx = data.get("colorx", 1.2)
+        colorx = data.get("colorx", 1.5)
         blackwhite = data.get("blackwhite", None)
         speedx = data.get("speedx", 1.1)
 
@@ -779,7 +779,8 @@ class ShortVideo():
 
         # 正文视频根据背景视频大小缩放
         # it can hangs when resize movie
-        video_clip_resize = sub_video_clip.resize(newsize=(int(bgVideo.w), int(bgVideo.h * (bgVideo.w/sub_video_clip.w))))
+        #video_clip_resize = sub_video_clip.resize(newsize=(int(bgVideo.w), int(bgVideo.h * (bgVideo.w/sub_video_clip.w))))
+        video_clip_resize = sub_video_clip #.resize(newsize=(int(bgVideo.w), int(bgVideo.h * (9/16))))
 
         # video_clip_resize = VideoFileClip(input_video_filename,
         #                                   verbose=True,
@@ -791,14 +792,14 @@ class ShortVideo():
             txt_clip = TextClip(title, font=TITLE_FONT, fontsize=70, color='white')
             #title = txt_clip.set_position(('center', 'top')).set_duration(duration_video_clip)
             #title = txt_clip.set_position(lambda t: ('center', 50 + t)).set_duration(duration_video_clip)
-            title = txt_clip.set_position((0.1,0.2), relative=True).set_duration(duration_video_clip)
+            title = txt_clip.set_position((0.35,0.1), relative=True).set_duration(duration_video_clip)
             clip_list.append(title)
 
         # 如果有字幕
         if subtitle :
             generator = lambda txt: TextClip(txt, font=SUBTITLE_FONT, fontsize=36, color='white')
             #subtitles = (SubtitlesClip(subtitle, generator).set_position(('center', 'bottom')))
-            subtitles = (SubtitlesClip(subtitle, generator).set_position((0.1,0.7), relative=True))
+            subtitles = (SubtitlesClip(subtitle, generator).set_position((0.1,0.8), relative=True))
             clip_list.append(subtitles)
 
         # 如果有logo

@@ -10,6 +10,7 @@
 # @DATA    : 2020-07-15
 
 https://zhuanlan.zhihu.com/p/115825045
+https://www.cnblogs.com/tuxiaomeng/p/10442514.html
 
 pip install Appium-Python-Client
 

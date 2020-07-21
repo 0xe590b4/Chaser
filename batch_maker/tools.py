@@ -695,7 +695,7 @@ class ShortVideo():
         output_video_filename = "{}/{}".format(data.get("output_video_filename", None), data.get("video_name", None))
 
         start = int(data.get("start", 0))
-        end = int(data.get("end", None))
+        end = data.get("end", None)
         title = data.get("title", None)
         subtitle = data.get("subtitle", None)
         background = data.get("background", None)

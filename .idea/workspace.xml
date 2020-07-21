@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1db213e2-2dce-46db-a50a-58f95e3ac293" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch_maker/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/batch_maker/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch_maker/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/batch_maker/tools.py" afterDir="false" />
     </list>
@@ -30,23 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/batch_maker/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="387" column="27" selection-start-line="387" selection-start-column="27" selection-end-line="387" selection-end-column="27" />
-              <folding>
-                <element signature="e#194#203#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/batch_maker/tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="696" column="39" selection-start-line="696" selection-start-column="39" selection-end-line="696" selection-end-column="39" />
+            <state relative-caret-position="125">
+              <caret line="697" column="35" lean-forward="true" selection-start-line="697" selection-start-column="35" selection-end-line="697" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -361,12 +350,12 @@
       <workItem from="1594101950770" duration="8341000" />
       <workItem from="1594140226539" duration="55714000" />
       <workItem from="1594477409556" duration="1283000" />
-      <workItem from="1594558423024" duration="49664000" />
+      <workItem from="1594558423024" duration="49892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286639000" />
+    <option name="totallyTimeSpent" value="286867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -792,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch_maker/tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="696" column="39" selection-start-line="696" selection-start-column="39" selection-end-line="696" selection-end-column="39" />
+        <state relative-caret-position="125">
+          <caret line="697" column="35" lean-forward="true" selection-start-line="697" selection-start-column="35" selection-end-line="697" selection-end-column="35" />
         </state>
       </provider>
     </entry>

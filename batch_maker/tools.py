@@ -695,7 +695,7 @@ class ShortVideo():
         output_video_filename = "{}/{}".format(data.get("output_video_filename", None), data.get("video_name", None))
 
         start = int(data.get("start", 0))
-        end = int(data.get("end", 15))
+        end = int(data.get("end", None))
         title = data.get("title", None)
         subtitle = data.get("subtitle", None)
         background = data.get("background", None)
@@ -733,9 +733,11 @@ class ShortVideo():
         audio_clip = audio_clip.fx(afx.audio_loop, duration=times_duration)
         #
 
+
         # 截取视频和音频
-        sub_video_clip = video_clip.subclip(start, end)
-        sub_audio_clip = audio_clip.subclip(start, end)
+        if end != None:
+            sub_video_clip = video_clip.subclip(start, end)
+            sub_audio_clip = audio_clip.subclip(start, end)
 
         duration_audio_clip = sub_audio_clip.duration
         duration_video_clip = sub_video_clip.duration

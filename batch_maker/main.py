@@ -266,8 +266,9 @@ class ShareWidget(QWidget):
 
             data = {
 
-                "start": 1,
-                "end": 15,
+                # "start": 1,
+                # "end": 15,
+                "ratio": 1,
                 "title": self.titlelineedit.text(),
                 "src_volume": self.movieslider.value(),
                 "dst_volume": self.bgmslider.value(),

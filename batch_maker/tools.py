@@ -24,10 +24,7 @@ from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import moviepy.audio.fx.all as afx
 import moviepy.video.fx.all as vfx
 
-
-TITLE_FONT = os.path.join(os.path.dirname(sys.argv[0]), "font/胡敬礼行书.ttf")
-SUBTITLE_FONT = os.path.join(os.path.dirname(sys.argv[0]),"font/义启简黑体拼音版.ttf")
-
+from demo.config import *
 
 
 class ShortVideo():
@@ -641,6 +638,15 @@ class ShortVideo():
 
         return  output_cover_dir_data
 
+
+    def cut_audio(self, input_video_filename, start, end, output_video_filename):
+
+        audio = AudioFileClip(input_video_filename).subclip(start, end)
+
+        audio.write_audiofile(output_video_filename)
+        audio.close()
+
+
     def cut_video(self, input_video_filename, start, end, output_video_filename,crop_size = 0):
 
         """
@@ -662,8 +668,8 @@ class ShortVideo():
         video = CompositeVideoClip([video_clip])
 
 
-        video = video.fx(vfx.crop, x1=crop_size, width=video.w,
-                       y1=crop_size, height=video.h)
+        video = video.fx(vfx.crop,  x2=video.w,  width=video.w,
+                        y2=video.h-850, height=video.h-crop_size)
 
 
 
@@ -695,7 +701,7 @@ class ShortVideo():
         background = data.get("background", None)
         cover = data.get("cover", None)
 
-        colorx = data.get("colorx", 1.5)
+        colorx = data.get("colorx", 1.2)
         blackwhite = data.get("blackwhite", None)
         speedx = data.get("speedx", 1.1)
 
@@ -779,8 +785,7 @@ class ShortVideo():
 
         # 正文视频根据背景视频大小缩放
         # it can hangs when resize movie
-        #video_clip_resize = sub_video_clip.resize(newsize=(int(bgVideo.w), int(bgVideo.h * (bgVideo.w/sub_video_clip.w))))
-        video_clip_resize = sub_video_clip #.resize(newsize=(int(bgVideo.w), int(bgVideo.h * (9/16))))
+        video_clip_resize = sub_video_clip.resize(newsize=(int(bgVideo.w), int(bgVideo.h * (bgVideo.w/sub_video_clip.w))))
 
         # video_clip_resize = VideoFileClip(input_video_filename,
         #                                   verbose=True,
@@ -790,16 +795,16 @@ class ShortVideo():
         clip_list = [bgVideo,video_clip_resize.set_pos("center")]
         if title :
             txt_clip = TextClip(title, font=TITLE_FONT, fontsize=70, color='white')
-            #title = txt_clip.set_position(('center', 'top')).set_duration(duration_video_clip)
+            title = txt_clip.set_position(('center', 'top')).set_duration(duration_video_clip)
             #title = txt_clip.set_position(lambda t: ('center', 50 + t)).set_duration(duration_video_clip)
-            title = txt_clip.set_position((0.35,0.1), relative=True).set_duration(duration_video_clip)
+            #title = txt_clip.set_position((0.1,0.2), relative=True).set_duration(duration_video_clip)
             clip_list.append(title)
 
         # 如果有字幕
         if subtitle :
             generator = lambda txt: TextClip(txt, font=SUBTITLE_FONT, fontsize=36, color='white')
-            #subtitles = (SubtitlesClip(subtitle, generator).set_position(('center', 'bottom')))
-            subtitles = (SubtitlesClip(subtitle, generator).set_position((0.1,0.8), relative=True))
+            subtitles = (SubtitlesClip(subtitle, generator).set_position(('center', 'bottom')))
+            #subtitles = (SubtitlesClip(subtitle, generator).set_position((0.1,0.7), relative=True))
             clip_list.append(subtitles)
 
         # 如果有logo

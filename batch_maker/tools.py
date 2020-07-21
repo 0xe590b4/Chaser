@@ -724,20 +724,24 @@ class ShortVideo():
 
         # 获取视频音频 视频可能没声音 需要特殊处理
         audio_filename = self.get_audio_from_video(input_video_filename)
-        audio_clip = AudioFileClip(audio_filename)
+        audio_clip = AudioFileClip(audio_filename)#.fx(afx.speedx, speedx)
 
 
         # 如果时间不够就循环
-        times_duration = end - start + 1
-        # video_clip = video_clip.fx(vfx.loop, duration=times_duration)
-        audio_clip = audio_clip.fx(afx.audio_loop, duration=times_duration)
-        #
+        if end != None:
+            times_duration = end - start + 1
+            # video_clip = video_clip.fx(vfx.loop, duration=times_duration)
+            audio_clip = audio_clip.fx(afx.audio_loop, duration=times_duration)
+            #
 
 
         # 截取视频和音频
         if end != None:
             sub_video_clip = video_clip.subclip(start, end)
             sub_audio_clip = audio_clip.subclip(start, end)
+        else:
+            sub_video_clip = video_clip
+            sub_audio_clip = audio_clip
 
         duration_audio_clip = sub_audio_clip.duration
         duration_video_clip = sub_video_clip.duration

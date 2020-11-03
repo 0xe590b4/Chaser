@@ -40,7 +40,7 @@ class UserWidget(QWidget):
         self.userlineedit = QLineEdit("https://v.douyin.com/JdrGMNx/")
         userlabel.setBuddy(self.userlineedit)
 
-        userpushbutton = QPushButton("浏览")
+        userpushbutton = QPushButton("提取视频")
         userpushbutton.clicked.connect(self.openUser)
 
         resultdirlabel = QLabel("下载到文件夹", self)

@@ -12,9 +12,9 @@
 
 
 ### 样例
- ![avatar](https://github.com/0xe590b4/kakura/blob/master/images/bathch_maker.png)
- ![avatar](https://github.com/0xe590b4/kakura/blob/master/images/bathch_uploader.png)
- ![avatar](https://github.com/0xe590b4/kakura/blob/master/images/share_download.png)
+ ![avatar](https://github.com/0xe590b4/Chaser/blob/master/images/bathch_maker.png)
+ ![avatar](https://github.com/0xe590b4/Chaser/blob/master/images/bathch_uploader.png)
+ ![avatar](https://github.com/0xe590b4/Chaser/blob/master/images/share_download.png)
 >>
     借用: https://github.com/XiyaoWong/spiders库
 >>  

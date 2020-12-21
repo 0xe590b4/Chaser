@@ -18,7 +18,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from proglog import ProgressBarLogger, RqWorkerProgressLogger
-from batch_maker.mobile import Mobile
+# from batch_maker.mobile import Mobile
 
 
 def get_mac_address():

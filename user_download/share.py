@@ -2,7 +2,7 @@
 import re
 
 
-from share_download.extractor import (acfun, baidutieba, bilibili, changya, douyin, haokan,
+from extractor import (acfun, baidutieba, bilibili, changya, douyin, haokan,
                        ku6, kuaishou, kugou, kuwo, lizhiFM, lofter, migu_music,
                        momo, music163, open163, pearvideo, pic58, pipigaoxiao,
                        pipix, qianqian, qingshipin, qqmusic, quanminkge,

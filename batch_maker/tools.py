@@ -24,7 +24,11 @@ from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 import moviepy.audio.fx.all as afx
 import moviepy.video.fx.all as vfx
 
-from demo.config import *
+RUNTIME = os.path.join(os.path.dirname(sys.argv[0]), "runtime/")
+TITLE_FONT = os.path.join(os.path.dirname(sys.argv[0]), "font/胡敬礼行书.ttf")
+SUBTITLE_FONT = os.path.join(os.path.dirname(sys.argv[0]),"font/义启简黑体拼音版.ttf")
+
+
 
 
 class ShortVideo():

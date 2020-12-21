@@ -18,7 +18,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from proglog import ProgressBarLogger
-from batch_maker.tools import ShortVideo
+from tools import ShortVideo
 
 
 def get_mac_address():

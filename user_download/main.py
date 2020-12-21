@@ -18,8 +18,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
-from user_download.user import getUserVideos
-from share_download.share import getShareVideo
+from user import getUserVideos
+from share import getShareVideo
 
 
 
